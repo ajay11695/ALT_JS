@@ -1,0 +1,78 @@
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ol,
+  ul {
+    margin-top: 2rem;
+    padding: 0;
+    /* font-weight: normal; */
+    text-align: center;
+    font-family: sans-serif;
+  }
+  
+  ol,
+  ul {
+    list-style: none;
+  }
+
+  .boxes{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+ .flex{
+    display: flex;
+    justify-content: space-between;
+ }
+
+  .box{
+    margin:0 1rem;
+    /* width: 50%; */
+    /* height: 400px; */
+    border: 2px solid red;
+    /* background: aliceblue;  */
+   
+
+  }
+
+ 
+
+  .mouse{
+ display: inline-block;
+ width: 150px;
+  }
+  
+
+
+  .Click{
+    padding: .2rem;
+    color: black;
+    background-color: white;
+    margin: 10rem;
+  }
+  .mouse{
+    padding:.2rem;
+    color: black;
+    background-color: white;
+    margin: 6.5rem;
+    margin-top:10rem;
+    
+}
+  

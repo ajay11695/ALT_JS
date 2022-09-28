@@ -1,0 +1,29 @@
+html{
+    box-sizing: border-box;
+}
+
+header{
+    text-align: center;
+}
+
+.box{
+    border: 1px solid red;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.container{
+    max-width: 1282px;
+    width: 100%;
+    margin: 1rem auto;
+    /* padding: 0 32px; */
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
