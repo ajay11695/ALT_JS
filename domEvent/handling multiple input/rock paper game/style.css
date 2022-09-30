@@ -1,0 +1,58 @@
+
+
+
+
+.container{
+    max-width: 600px;
+    margin: 0 auto;
+    border: 10px solid red;
+    background-color: aliceblue;
+}
+
+h1{
+    font-size: 3rem;
+    margin: 0 0;
+    text-align: center;
+    background: gray;
+}
+
+
+
+h2{
+    font-size: 2rem;
+}
+
+.useri{
+    font-size: 5rem;
+    padding: 1rem;
+    margin: 0 2rem;
+    color: blue;
+}
+.comi{
+    font-size: 5rem;
+    padding: 1rem;
+    margin: 0 2rem;
+    color:red;
+}
+
+.result {
+    text-align: center;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.size{
+    font-size: 2rem;
+    color: red;
+}
+
+.computer-icon{
+    background-color:antiquewhite;
+}
+
+i:hover{
+    color: aqua;
+}
