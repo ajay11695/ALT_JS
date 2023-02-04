@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetching Data</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="bold text_align">Github User Finder</h1>
+    </header>
+    <main class="container">
+         <div class="text_align">
+            <input type="text" placeholder="Enter a github username">
+            <figure ><img class="user_img" src=data:image/jpeg;base64,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 alt=""></figure>
+            <h3 class="bold userName" style="font-size: 32px;">Name</h3>
+            <p class=" bold user_id">Username</p>
+         </div>
+
+        <div class="flex ">
+            <h3 class="bold flex-20" >Followers:-</h3>
+            <div class="flex flex-80 follower_div">
+                <!-- <figure><img src="https://t4.ftcdn.net/jpg/03/03/62/45/360_F_303624505_u0bFT1Rnoj8CMUSs8wMCwoKlnWlh5Jiq.webp" alt=""></figure>
+            <figure><img src="https://t4.ftcdn.net/jpg/03/03/62/45/360_F_303624505_u0bFT1Rnoj8CMUSs8wMCwoKlnWlh5Jiq.webp" alt=""></figure>
+            <figure><img src="https://t4.ftcdn.net/jpg/03/03/62/45/360_F_303624505_u0bFT1Rnoj8CMUSs8wMCwoKlnWlh5Jiq.webp" alt=""></figure>
+            <figure><img src="https://t4.ftcdn.net/jpg/03/03/62/45/360_F_303624505_u0bFT1Rnoj8CMUSs8wMCwoKlnWlh5Jiq.webp" alt=""></figure>
+            <figure><img src="https://t4.ftcdn.net/jpg/03/03/62/45/360_F_303624505_u0bFT1Rnoj8CMUSs8wMCwoKlnWlh5Jiq.webp" alt=""></figure> -->
+            </div>
+        </div>
+        <div class="flex ">
+            <h3 class="bold flex-20">Following:-</h3>
+            <div class="flex flex-80 following_div">
+                <!-- <figure><img src="https://t4.ftcdn.net/jpg/03/03/62/45/360_F_303624505_u0bFT1Rnoj8CMUSs8wMCwoKlnWlh5Jiq.webp" alt=""></figure>
+            <figure><img src="https://t4.ftcdn.net/jpg/03/03/62/45/360_F_303624505_u0bFT1Rnoj8CMUSs8wMCwoKlnWlh5Jiq.webp" alt=""></figure>
+            <figure><img src="https://t4.ftcdn.net/jpg/03/03/62/45/360_F_303624505_u0bFT1Rnoj8CMUSs8wMCwoKlnWlh5Jiq.webp" alt=""></figure>
+            <figure><img src="https://t4.ftcdn.net/jpg/03/03/62/45/360_F_303624505_u0bFT1Rnoj8CMUSs8wMCwoKlnWlh5Jiq.webp" alt=""></figure>
+            <figure><img src="https://t4.ftcdn.net/jpg/03/03/62/45/360_F_303624505_u0bFT1Rnoj8CMUSs8wMCwoKlnWlh5Jiq.webp" alt=""></figure> -->
+            </div>
+        </div>
+    </main>
+    <hr>
+
+    <footer class="container">
+        <div class=" text_align">
+            <h1 style="color: black;">Get Random Cat 🐱</h1>
+            <figure class="footer_img"><img src="https://t4.ftcdn.net/jpg/03/03/62/45/360_F_303624505_u0bFT1Rnoj8CMUSs8wMCwoKlnWlh5Jiq.webp" alt=""></figure>
+            <button>Get New Cat</button>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
