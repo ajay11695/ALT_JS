@@ -1,0 +1,171 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* *****custum**** */
+body{
+    background: linear-gradient(to right ,#7759ab,#6a76da);
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+.textalign{
+    text-align: center;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* ****header**** */
+.header{
+    text-align: center;
+    background: linear-gradient(to right ,#7759ab,#6a76da);
+    padding: 30px 0;
+}
+
+h1{
+    font-size: 40px;
+    font-weight: 700;
+    background-color: rgb(142, 142, 232);
+    display: inline;
+}
+
+/* *****books*******  */
+.books{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bookBox{
+    flex: 0 1 49%;
+    border: 2px dotted red;
+    text-align: center;
+    padding: 20px 0;
+    background-color: white;
+}
+
+h2{
+    font-size: 40px;
+    font-weight: 700;
+    margin: 30px 0 90px 0;
+}
+
+p{
+    font-size: 32px;
+    font-weight: 700;
+    margin: 40px 0;
+}
+
+a{
+    font-size: 24px;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+/* *****characterList**** */
+.characterList{
+    background-color: #3b898a;
+    padding: 50px 32px;
+    display: none;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+h3{
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.btn{
+    display: flex;
+    justify-content: end;
+}
+
+button{
+    font-size: 24px;
+    background-color: #3b898a;
+    border: none;
+    font-weight: 600;
+}
+
+.characterName{
+    color: white;
+    border: 2px solid rgb(234, 218, 218);
+    padding: 10px;
+}
+
+/* spinner */
+@keyframes donut-spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .donut {
+    display: inline-block;
+    border: 6px solid rgba(243, 242, 242, 0.1);
+    border-left-color: #5761f0;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: donut-spin 1.2s linear infinite;
+  }
