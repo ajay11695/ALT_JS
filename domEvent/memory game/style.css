@@ -1,0 +1,155 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* ************* */
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+body{
+    /* margin: 90px 0; */
+    background: #6f91ef;
+}
+
+.textalign{
+  text-align: center;
+}
+
+#container{
+    max-width: 900px;
+    margin: 40px auto 10px auto;
+}
+
+.flex{
+  display: flex;
+  justify-content: space-around;
+}
+
+/* *****header**** */
+
+h1{
+    font-size: 50px;
+    font-weight: 700;
+    color: rgb(176, 54, 54);
+    font-style: oblique;
+    margin: 20px 0;
+    text-align: center;
+    border-bottom:4px solid rgb(237, 157, 157) ;
+    display: inline;
+}
+
+h2,h3{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* *****main***** */
+
+.grid {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  
+
+  .card {
+    position: relative;
+    transition: all 0.4s linear;
+    transform-style: preserve-3d;
+    margin: 5px;
+  }
+
+  .card,.front,.back{
+    height: 9rem;
+    width: 9rem;
+  }
+
+  .front {
+    background: #fab942 url('./img/question.gif') no-repeat center center /
+      contain;
+  }
+
+  .back {
+    /* transform: rotateY(180deg); */
+    /* background-color: white; */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .back,
+.front {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+
+  .selected{
+    transform: rotateY(180deg);
+  }
+
+  .match .front{
+    background: #6f91ef !important;
+  }
+/* ******footer**** */
+  button{
+    font-size: 20px;
+    background-color: rgb(18, 245, 169);
+    border-radius: 10px;
+    padding: 5px 10px;
+  }
+
+  p{
+    font-size: 24px;
+    font-weight: 600;
+    color: red;
+    margin: 20px 0;
+  }
