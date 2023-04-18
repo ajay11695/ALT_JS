@@ -5,32 +5,78 @@ You can add new item to the list
 You should be able to drag and drop the items in the list
 Follow this article (https://web.dev/drag-and-drop/) while creating this drag and drop list*/
 
-let btn=document.querySelector('span')
-let input=document.querySelector('input')
-let ul=document.querySelector('ul')
-// let lists=document.querySelectorAll('.draggable')
+var btn = document.querySelector('span');
+var remove = document.querySelector('.draggable');
 
+function dragStart(e) {
+  this.style.opacity = '0.4';
+  dragSrcEl = this;
+  e.dataTransfer.effectAllowed = 'move';
+  e.dataTransfer.setData('text/html', this.innerHTML);
+};
 
-
-
-
-function addNewItem(){
-    let add=input.value
-    if(add!=''){
-        input.value=''
-        var li=document.createElement('li')
-        li.setAttribute('draggable','true')
-        li.classList.add('draggable')
-        li.innerText=add
-        ul.append(li)
-    }
-
-    dragAndDrop(lists)
-
-
+function dragEnter(e) {
+  this.classList.add('over');
 }
 
-btn.addEventListener('click',addNewItem)
+function dragLeave(e) {
+  e.stopPropagation();
+  this.classList.remove('over');
+}
+
+function dragOver(e) {
+  e.preventDefault();
+  e.dataTransfer.dropEffect = 'move';
+  return false;
+}
+
+function dragDrop(e) {
+  if (dragSrcEl != this) {
+    dragSrcEl.innerHTML = this.innerHTML;
+    this.innerHTML = e.dataTransfer.getData('text/html');
+  }
+  return false;
+}
+
+function dragEnd(e) {
+  var listItens = document.querySelectorAll('.draggable');
+  [].forEach.call(listItens, function(item) {
+    item.classList.remove('over');
+  });
+  this.style.opacity = '1';
+}
+
+function addEventsDragAndDrop(el) {
+  el.addEventListener('dragstart', dragStart, false);
+  el.addEventListener('dragenter', dragEnter, false);
+  el.addEventListener('dragover', dragOver, false);
+  el.addEventListener('dragleave', dragLeave, false);
+  el.addEventListener('drop', dragDrop, false);
+  el.addEventListener('dragend', dragEnd, false);
+}
+
+var listItens = document.querySelectorAll('.draggable');
+[].forEach.call(listItens, function(item) {
+  addEventsDragAndDrop(item);
+});
+
+function addNewItem() {
+  var newItem = document.querySelector('input').value;
+  if (newItem != '') {
+    document.querySelector('input').value = '';
+    var li = document.createElement('li');
+    var attr = document.createAttribute('draggable');
+    var ul = document.querySelector('ul');
+    li.className = 'draggable';
+    attr.value = 'true';
+    li.setAttributeNode(attr);
+    li.appendChild(document.createTextNode(newItem));
+    ul.appendChild(li);
+    addEventsDragAndDrop(li);
+  }
+}
+
+btn.addEventListener('click', addNewItem);
 
 
 
